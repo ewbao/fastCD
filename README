@@ -1,9 +1,6 @@
-This program is incomplete. Installation method and .jar files have not been implemented, 
-and edges have not been completely smoothed out. If you'd like to use it anyway, here are 
-some setup instructions:
+This program is incomplete. This was written because I work with UNIX a lot and wanted to get to directories without typing the same long path over and over again. Thus, installation method and .jar files have not been implemented, and edges have not been completely smoothed out -- but it works. If you'd like to use it anyway, here are some setup instructions:
 
-Program adds and extension to the builtin "cd", which allows the user to use cd normally but 
-also have the option to jump to previously used directories. Examples:
+Program adds and extension to the builtin "cd", which allows the user to use cd normally but also have the option to jump to previously used directories. Examples:
 
 This would send you to the /usr/local directory
 user ~$ pwd
@@ -21,9 +18,7 @@ user ~$ cd local
 user ~$ pwd
 /usr/local
 
-What if there are several local directories and you're not sure which one you want? Default cd would 
-put you in the one you used most recently. With the "alt" option, you can go to a different local directory,
-and with the "print" option, you can see all the hashed paths for the directory 
+What if there are several local directories and you're not sure which one you want? Default cd would put you in the one you used most recently. With the "alt" option, you can go to a different local directory, and with the "print" option, you can see all the hashed paths for the directory 
 user ~$ cd ~/local
 user ~$ cd ~/Downloads/Pictures/local
 user ~$ pwd
@@ -40,16 +35,16 @@ user ~$ pwd
 
 
 
-1) add path for directory that the java and .sh files are in. This should be done in JPConstructor.java
-   (in the line File file = new File(${mypath}), shellInsert.sh (replace myclasspath with your new path),
-   and shellFind.sh (replace myclasspath with your new path). This path must also be read/writable to 
-   the user. If not, program will not work at all and you might break your "cd"
+1) add path for directory that the java and .sh files are in. This should be done in JPConstructor.java (in the line File file = new File(${mypath}), shellInsert.sh (replace myclasspath with your new path), and shellFind.sh (replace myclasspath with your new path). This path must also be read/writable to the user. If not, program will not work at all and you might break your "cd"
+
 2) add alias to .bashrc
    alias cd='. ${abovepath}/shellFind.sh'
    alias jp='. ${abovepath}/shellInsert.sh'
+
 3) compile classes
    javac -classpath $abovepath *.java
+
 4) remove any .data files
 
-If you have any questions/comments, please email ethelbao@gmail.com
+If you have any questions/contributions/demands/comments, please email ethelbao@gmail.com
 
