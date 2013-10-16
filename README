@@ -1,6 +1,6 @@
 This program is incomplete. This was written because I work with UNIX a lot and wanted to get to directories without typing the same long path over and over again. Thus, installation method and .jar files have not been implemented, and edges have not been completely smoothed out -- but it works. If you'd like to use it anyway, here are some setup instructions:
 
-Program adds and extension to the builtin "cd", which allows the user to use cd normally but also have the option to jump to previously used directories. Examples:
+Program adds an extension to the builtin "cd", which allows the user to use cd normally but also have the option to jump to previously used directories. Examples:
 
 This would send you to the /usr/local directory
 user ~$ pwd
